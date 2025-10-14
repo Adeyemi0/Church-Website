@@ -73,10 +73,10 @@ backToTop.addEventListener('click', () => {
 });
 
 // Form Submission Handler
-const questionForm = document.getElementById('questionForm');
+const prayerRequestForm = document.getElementById('prayerRequestForm'); 
 const formMessage = document.getElementById('formMessage');
 
-questionForm.addEventListener('submit', (e) => {
+prayerRequestForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
     // Get form data
@@ -85,14 +85,14 @@ questionForm.addEventListener('submit', (e) => {
         email: document.getElementById('email').value,
         phone: document.getElementById('phone').value,
         category: document.getElementById('category').value,
-        question: document.getElementById('question').value,
-        anonymous: document.getElementById('anonymous').checked
+        prayer: document.getElementById('prayer').value, 
+        confidential: document.getElementById('confidential').checked 
     };
     
     // Show loading state
-    const submitBtn = questionForm.querySelector('.submit-btn');
-    const originalBtnContent = submitBtn.innerHTML;
-    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+    const submitBtn = prayerRequestForm.querySelector('.submit-btn');
+    const originalBtnContent = '<span>Send Prayer Request</span><i class="fa-solid fa-hand-holding-heart"></i>'; 
+    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
     submitBtn.disabled = true;
     
     // Simulate form submission (replace with actual API call)
@@ -103,10 +103,10 @@ questionForm.addEventListener('submit', (e) => {
         
         // Show success message
         formMessage.className = 'form-message success';
-        formMessage.textContent = 'Thank you! Your question has been submitted successfully. We appreciate your engagement and will address it in upcoming sermons or discussions.';
+        formMessage.textContent = 'Amen! Your prayer request has been submitted successfully. Our prayer team will lift you and your needs up to the Lord. Blessings!';
         
         // Reset form
-        questionForm.reset();
+        prayerRequestForm.reset();
         
         // Scroll to message
         formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -117,7 +117,7 @@ questionForm.addEventListener('submit', (e) => {
         }, 8000);
         
         // Log form data to console (for testing)
-        console.log('Form submitted:', formData);
+        console.log('Prayer Request submitted:', formData);
         
     }, 1500);
     
@@ -137,11 +137,11 @@ questionForm.addEventListener('submit', (e) => {
         
         if (data.success) {
             formMessage.className = 'form-message success';
-            formMessage.textContent = 'Thank you! Your question has been submitted successfully.';
-            questionForm.reset();
+            formMessage.textContent = 'Amen! Your prayer request has been submitted successfully. Our prayer team will lift you and your needs up to the Lord. Blessings!';
+            prayerRequestForm.reset();
         } else {
             formMessage.className = 'form-message error';
-            formMessage.textContent = 'Sorry, there was an error submitting your question. Please try again.';
+            formMessage.textContent = 'Sorry, there was an error submitting your prayer request. Please try again.';
         }
         
         formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -150,7 +150,7 @@ questionForm.addEventListener('submit', (e) => {
         submitBtn.innerHTML = originalBtnContent;
         submitBtn.disabled = false;
         formMessage.className = 'form-message error';
-        formMessage.textContent = 'Sorry, there was an error submitting your question. Please try again.';
+        formMessage.textContent = 'Sorry, there was an error submitting your prayer request. Please try again.';
         console.error('Error:', error);
     });
     */
@@ -162,6 +162,8 @@ const inputs = document.querySelectorAll('.form-group input, .form-group select,
 inputs.forEach(input => {
     // Add real-time validation feedback
     input.addEventListener('blur', () => {
+        // The 'required' attribute on the input field in the HTML handles core validation.
+        // This JavaScript section applies styling only if 'required' is present and the field is empty.
         if (input.hasAttribute('required') && !input.value.trim()) {
             input.style.borderColor = '#e74c3c';
         } else {
