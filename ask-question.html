@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask A Question - Christ Life For The World Ministry</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="ask-question-styles.css">
+</head>
+<body>
+
+<!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="logo.jpg" alt="Church Logo" class="logo-img">
+                <a href="#hero" class="logo-text">Christ Life For The World Ministry</a>
+            </div>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li class="dropdown">
+                        <a href="#ministries" class="dropdown-toggle">Ministries</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="radio-ministry.html">Radio Ministry</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="give.html">Give</a></li>
+                    <li><a href="download.html">SERMONS</a></li>
+                </ul>
+            </nav>
+
+            <i class="fa-solid fa-bars mobile-nav-toggle"></i>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="question-page">
+        <div class="page-container">
+            <div class="page-header">
+                <h1>Got Questions?</h1>
+                <p class="intro-text">
+                    We would love for you to ask some questions that you might have, whether it be about the Bible, God, or maybe a theological question. Ask away! Maybe you have been wrestling with something and are looking for a Biblical answer to it. As we gather these questions, we will bring them up in future sermon series, podcasts, or discussions. So don't be shy, ask away.
+                </p>
+            </div>
+
+            <form id="questionForm" class="question-form">
+                <div class="form-group">
+                    <label for="name">Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Question Category <span class="required">*</span></label>
+                    <select id="category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="bible">Bible Question</option>
+                        <option value="theology">Theological Question</option>
+                        <option value="god">About God</option>
+                        <option value="faith">Faith & Practice</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="question">Your Question <span class="required">*</span></label>
+                    <textarea id="question" name="question" rows="6" required placeholder="Type your question here..."></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="anonymous" name="anonymous">
+                        <span>Submit anonymously (your contact info will be kept private)</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span>Submit Question</span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+
+                <div class="form-message" id="formMessage"></div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <div class="float-btn back-to-top" title="Back to Top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+        <a href="https://t.me/yourchannelname" target="_blank" class="float-btn telegram-btn" title="Download Teachings on Telegram">
+            <span>Join our Telegram</span>
+            <i class="fa-brands fa-telegram"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Christ Life For The World Ministry. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="ask-question-scripts.js"></script>
+</body>
+</html>
