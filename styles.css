@@ -200,7 +200,6 @@ header.scrolled {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Gradient overlay from about.css */
     background: linear-gradient(135deg,
         rgba(0, 102, 184, 0.85) 0%,
         rgba(0, 128, 200, 0.85) 25%,
@@ -252,7 +251,7 @@ header.scrolled {
 }
 
 .btn-primary {
-    background:  #f39c12;
+    background: #f39c12;
     color: white;
     border: 2px solid #f39c12;
 }
@@ -285,6 +284,219 @@ header.scrolled {
     background: white;
     color: #2c3e50;
     transform: translateY(-3px);
+}
+
+/* Welcome Section */
+.welcome-section {
+    background: white;
+    padding: 60px 0;
+    text-align: left;
+}
+
+.welcome-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0; /* removed side padding for alignment */
+}
+
+.welcome-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+}
+
+/* New style for WELCOME TO CLFRTWM */
+.welcome-header .welcome-subtitle-text {
+    color: #000;
+}
+
+.welcome-header i {
+    font-size: 18px;
+    color: #3498db;
+}
+
+.welcome-section h2 {
+    font-size: 40px; 
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #000; 
+    line-height: 1.2;
+    font-family: 'Poppins', sans-serif;
+}
+
+.welcome-section p {
+    font-size: 15px;
+    color: #000; 
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Image Cards Section */
+.image-cards-section {
+    background: white;
+    margin-top: 0;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px; 
+    width: 100%;
+}
+
+/* ---- Rest unchanged ---- */
+.image-card {
+    position: relative;
+    height: 380px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.image-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.image-card:hover .card-overlay {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+}
+
+.card-content {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+    color: white;
+    z-index: 2;
+}
+
+.card-subtitle {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    opacity: 0.9;
+    font-family: 'Lato', sans-serif;
+}
+
+.card-title {
+    font-size: 28px; 
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: gap 0.3s ease;
+    font-family: 'Lato', sans-serif;
+}
+
+.card-link:hover {
+    gap: 15px;
+}
+
+.card-link i {
+    font-size: 16px;
+}
+
+/* Prayer Section */
+.prayer-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 80px 20px;
+    margin-bottom: 80px;
+}
+
+.prayer-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.prayer-content {
+    text-align: center;
+    color: white;
+}
+
+.prayer-content h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.prayer-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    opacity: 0.95;
+}
+
+.btn-prayer {
+    background: white;
+    color: #667eea;
+    border: 2px solid white;
+    padding: 15px 45px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-prayer:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Floating Buttons */
@@ -487,54 +699,44 @@ header.scrolled {
         max-width: 300px;
     }
 
-    .floating-buttons {
-        right: 15px;
-        bottom: 20px;
-        left: 15px;
+    /* Welcome Section Mobile */
+    .welcome-section {
+        padding: 40px 15px;
     }
 
-    .float-btn {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
+        .welcome-container {
+        padding: 0; /* keep flush with grid */
     }
 
-    .telegram-btn {
-        padding: 10px 15px;
-        width: 100%;
-        max-width: calc(100vw - 30px);
-        justify-content: space-between;
+    .welcome-section h2 {
+        font-size: 28px;
     }
 
-    .telegram-btn i {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-        flex-shrink: 0;
-    }
-
-    .telegram-btn span {
-        font-size: 12px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .back-to-top {
-        align-self: flex-end;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo-text {
-        font-size: 11px;
-    }
-
-    .hero-content h1 {
-        font-size: 20px;
-    }
-
-    .btn {
-        padding: 12px 30px;
+    .welcome-section p {
         font-size: 14px;
+    }
+
+    /* Image cards mobile */
+    .image-cards-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .image-card {
+        height: 280px;
+    }
+
+    .card-content {
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+    }
+
+    .card-title {
+        font-size: 22px;
+    }
+
+    .card-link {
+        font-size: 10px;
     }
 }
