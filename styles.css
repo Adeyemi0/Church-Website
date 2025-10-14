@@ -623,8 +623,9 @@ header.scrolled {
         height: calc(100vh - 70px);
         background: white;
         transition: left 0.3s ease;
-        padding: 20px;
+        padding: 20px 0;
         overflow-y: auto;
+        overflow-x: visible;
     }
 
     .navbar.active {
@@ -635,6 +636,8 @@ header.scrolled {
         flex-direction: column;
         gap: 0;
         align-items: flex-start;
+        width: 100%;
+        padding: 0 20px;
     }
 
     .navbar li {
@@ -648,27 +651,39 @@ header.scrolled {
     }
 
     .dropdown-menu {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        padding: 10px 0 10px 20px;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        border-radius: 0;
-        background: #f8f9fa;
-        margin-top: 0;
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        box-shadow: none !important;
+        padding: 10px 0 10px 30px !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        transition: max-height 0.3s ease !important;
+        border-radius: 0 !important;
+        background: #f8f9fa !important;
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+        width: auto !important;
+        display: block !important;
     }
 
     .dropdown.active .dropdown-menu {
-        max-height: 500px;
+        max-height: 1000px !important;
+        overflow: hidden !important;
+    }
+
+    .dropdown-menu li {
+        display: block !important;
+        width: 100% !important;
     }
 
     .dropdown-menu a {
-        padding: 10px 15px;
-        font-size: 14px;
+        padding: 10px 0 !important;
+        font-size: 14px !important;
+        word-wrap: break-word !important;
+        white-space: normal !important;
+        display: block !important;
     }
 
     .dropdown-menu a:hover {
@@ -704,8 +719,8 @@ header.scrolled {
         padding: 40px 15px;
     }
 
-        .welcome-container {
-        padding: 0; /* keep flush with grid */
+    .welcome-container {
+        padding: 0;
     }
 
     .welcome-section h2 {
