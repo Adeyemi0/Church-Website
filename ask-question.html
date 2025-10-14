@@ -3,24 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ask A Question - Christ Life For The World Ministry</title>
+    <title>Prayer Request - Christ Life For The World Ministry</title>
 
-    <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- CSS -->
     <link rel="stylesheet" href="ask-question-styles.css">
 </head>
 <body>
 
-<!-- Header -->
-    <header id="header">
+<header id="header">
         <div class="container">
             <div class="logo-container">
                 <img src="logo.jpg" alt="Church Logo" class="logo-img">
@@ -39,6 +34,7 @@
                     </li>
                     <li><a href="give.html">Give</a></li>
                     <li><a href="download.html">SERMONS</a></li>
+                    <li><a href="request-prayer.html" class="active">Prayer</a></li> 
                 </ul>
             </nav>
 
@@ -47,21 +43,18 @@
     </header>
 
 
-    <!-- Main Content -->
     <main class="question-page">
         <div class="page-container">
             <div class="page-header">
-                <h1>Got Questions?</h1>
+                <h1>Submit a Prayer Request</h1>
                 <p class="intro-text">
-                    We would love for you to ask some questions that you might have, whether it be about the Bible, God, or maybe a theological question. Ask away! Maybe you have been wrestling with something and are looking for a Biblical answer to it. As we gather these questions, we will bring them up in future sermon series, podcasts, or discussions. So don't be shy, ask away.
+                    Let us pray for you. Whether you are facing a struggle, celebrating a victory, or standing in need of a breakthrough, we believe in the power of prayer. Share your request with our ministry team and we will lift your needs before God. Please know that your request will be kept confidential.
                 </p>
             </div>
 
-            <form id="questionForm" class="question-form">
+            <form id="prayerRequestForm" class="question-form">
                 <div class="form-group">
-                    <label for="name">Name <span class="required">*</span></label>
-                    <input type="text" id="name" name="name" required placeholder="Enter your name">
-                </div>
+                    <label for="name">Name (Optional)</label> <input type="text" id="name" name="name" placeholder="Enter your name or submit anonymously"> </div>
 
                 <div class="form-group">
                     <label for="email">Email <span class="required">*</span></label>
@@ -74,32 +67,33 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="category">Question Category <span class="required">*</span></label>
+                    <label for="category">Prayer Category <span class="required">*</span></label>
                     <select id="category" name="category" required>
                         <option value="">Select a category</option>
-                        <option value="bible">Bible Question</option>
-                        <option value="theology">Theological Question</option>
-                        <option value="god">About God</option>
-                        <option value="faith">Faith & Practice</option>
+                        <option value="healing">Healing & Health</option>
+                        <option value="family">Family & Relationships</option>
+                        <option value="financial">Financial Needs</option>
+                        <option value="spiritual">Spiritual Growth</option>
+                        <option value="salvation">Salvation</option>
                         <option value="other">Other</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="question">Your Question <span class="required">*</span></label>
-                    <textarea id="question" name="question" rows="6" required placeholder="Type your question here..."></textarea>
+                    <label for="prayer">Your Prayer Request <span class="required">*</span></label>
+                    <textarea id="prayer" name="prayer" rows="6" required placeholder="Type your prayer request here..."></textarea>
                 </div>
 
                 <div class="form-group checkbox-group">
                     <label class="checkbox-label">
-                        <input type="checkbox" id="anonymous" name="anonymous">
-                        <span>Submit anonymously (your contact info will be kept private)</span>
+                        <input type="checkbox" id="confidential" name="confidential" checked>
+                        <span>Keep my request confidential</span>
                     </label>
                 </div>
 
                 <button type="submit" class="submit-btn">
-                    <span>Submit Question</span>
-                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Send Prayer Request</span>
+                    <i class="fa-solid fa-hand-holding-heart"></i>
                 </button>
 
                 <div class="form-message" id="formMessage"></div>
@@ -107,7 +101,6 @@
         </div>
     </main>
 
-    <!-- Floating Buttons -->
     <div class="floating-buttons">
         <div class="float-btn back-to-top" title="Back to Top">
             <i class="fa-solid fa-arrow-up"></i>
@@ -118,13 +111,10 @@
         </a>
     </div>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Christ Life For The World Ministry. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript -->
     <script src="ask-question-scripts.js"></script>
 </body>
-
 </html>
