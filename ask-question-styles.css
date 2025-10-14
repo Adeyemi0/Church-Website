@@ -557,7 +557,7 @@ footer {
     }
 
     .telegram-btn span {
-        font-size: 12px;
+        font-size: 14px; /* Increased for better legibility */
         overflow: hidden;
         text-overflow: ellipsis;
     }
