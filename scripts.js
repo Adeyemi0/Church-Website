@@ -83,25 +83,40 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Active Navigation Link on Scroll
+    // Active Navigation Link on Scroll - UPDATED LOGIC
     const sections = document.querySelectorAll('section[id]');
     const navLinksAll = document.querySelectorAll('.navbar a');
 
     if (sections.length > 0 && navLinksAll.length > 0) {
         window.addEventListener('scroll', () => {
             let current = '';
+            const scrollPosition = window.scrollY;
             
+            // 1. Determine the current section ID
             sections.forEach(section => {
+                // Use a larger offset for better accuracy, e.g., half the screen height
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (window.scrollY >= (sectionTop - 100)) {
+                if (scrollPosition >= (sectionTop - 200)) {
                     current = section.getAttribute('id');
                 }
             });
 
+            // 2. Set the active class on the corresponding link
             navLinksAll.forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href').includes(current)) {
+
+                const href = link.getAttribute('href');
+
+                // Case 1: Link to a section on the same page (e.g., #ministries)
+                // Check if the link's href is an anchor AND includes the current section ID.
+                // We ensure 'current' is not an empty string to fix the bug.
+                if (current && href.startsWith('#') && href.includes(current)) {
+                    link.classList.add('active');
+                }
+                
+                // Case 2: The 'Home' link (home.html)
+                // If scroll is near the top (e.g., within 100px), set 'Home' as active
+                if (scrollPosition < 100 && href === 'home.html') {
                     link.classList.add('active');
                 }
             });
