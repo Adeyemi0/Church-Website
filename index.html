@@ -1,3 +1,4 @@
+home.html:
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,23 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christ Life For The World Ministry</title>
 
-    <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- JavaScript -->
     <script src="scripts.js"></script>
-    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Header -->
-    <header id="header">
+  <header id="header">
         <div class="container">
             <div class="logo-container">
                 <img src="logo.jpg" alt="Church Logo" class="logo-img">
@@ -30,7 +25,7 @@
             
             <nav class="navbar">
                 <ul>
-                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li class="dropdown">
                         <a href="#ministries" class="dropdown-toggle">Ministries</a>
@@ -48,7 +43,6 @@
     </header>
 
 
-    <!-- Hero Section -->
     <section id="hero">
         <div class="hero-image">
             <img src="img/3.jpg" alt="Hero Image">
@@ -60,14 +54,72 @@
             <h1>We are raising a Christ-centered people who transform lives, families, and nations by the power of the Gospel</h1>
             <div class="hero-buttons">
                 <a href="about.html" class="btn btn-primary">Who we are</a>
-                <a href="visit-us.html" class="btn btn-secondary">Visit Us</a>
                 <a href="https://web.facebook.com/Clftwm" class="btn btn-tertiary" target="_blank">Live Stream</a>
-
             </div>
         </div>
     </section>
 
-    <!-- Floating Buttons -->
+    <section class="welcome-section">
+        <div class="welcome-container">
+            <div class="welcome-header">
+                <i class="fa-solid fa-home"></i>
+                <span class="welcome-subtitle-text">WELCOME TO CLFRTWM</span>
+            </div>
+            <h2>WELCOME HOME!</h2>
+            <p>Find your place in our teachings and community.<br>Your journey of faith begins here.</p>
+            </div>
+    </section>
+
+    <section class="image-cards-section">
+        <div class="image-cards-container">
+            <div class="image-card">
+                <div class="card-image">
+                    <img src="img/6.jpg" alt="Connect with us">
+                </div>
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <h3 class="card-subtitle">JOIN OUR COMMUNITY</h3>
+                    <h2 class="card-title">Connect with us</h2>
+                    <a href="visit-us.html" class="card-link">LEARN MORE <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="card-image">
+                    <img src="img/pastor.jpg" alt="Download our sermons">
+                </div>
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <h3 class="card-subtitle">SPIRITUAL GROWTH</h3>
+                    <h2 class="card-title">Download our sermons</h2>
+                    <a href="download.html" class="card-link">LEARN MORE <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="card-image">
+                    <img src="img/1.jpg" alt="Give">
+                </div>
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <h3 class="card-subtitle">SUPPORT THE MINISTRY</h3>
+                    <h2 class="card-title">Give</h2>
+                    <a href="give.html" class="card-link">GIVE NOW <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="prayer-section">
+        <div class="prayer-container">
+            <div class="prayer-content">
+                <h2>Need Counselling?</h2>
+                <p>Are you facing challenges, seeking guidance, or simply need someone to talk to? We are here for you. Our dedicated team of counselors is available to provide confidential and compassionate support, free of charge.</p>
+                <a href="ask-question.html" class="btn btn-prayer">Ask for Prayer</a>
+            </div>
+        </div>
+    </section>
+
     <div class="floating-buttons">
         
         <div class="float-btn back-to-top" title="Back to Top">
@@ -79,19 +131,6 @@
         </a>
     </div>
 
-    <!-- Main Content -->
-    <main style="padding: 100px 20px; min-height: 100vh;">
-        <h2 style="text-align: center; font-size: 32px; margin-bottom: 20px;">Welcome to Our Ministry</h2>
-        <p style="text-align: center; font-size: 18px; max-width: 800px; margin: 0 auto; line-height: 1.8;">
-            Other page content goes here. 
-        </p>
-        
-        <div style="height: 800px; display: flex; align-items: center; justify-content: center;">
-            <p style="font-size: 20px; color: #666;">I will have the floating buttons appear!</p>
-        </div>
-    </main>
-
-    <!-- Footer -->
     <footer style="background: #2c3e50; color: white; padding: 30px; text-align: center;">
         <p>&copy; 2025 Christ Life For The World Ministry. All rights reserved.</p>
     </footer>
@@ -99,6 +138,3 @@
     
 </body>
 </html>
-
-
-
