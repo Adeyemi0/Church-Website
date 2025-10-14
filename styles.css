@@ -286,56 +286,44 @@ header.scrolled {
     transform: translateY(-3px);
 }
 
-/* Welcome Section */
+/* Welcome Section — FULLY UPDATED */
 .welcome-section {
     background: white;
-    padding: 60px 0;
-    text-align: left;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .welcome-container {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0; /* removed side padding for alignment */
 }
 
 .welcome-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-    font-size: 14px;
+    margin-bottom: 10px;
+    font-size: 16px;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     font-family: 'Lato', sans-serif;
-}
-
-/* New style for WELCOME TO CLFRTWM */
-.welcome-header .welcome-subtitle-text {
-    color: #000;
-}
-
-.welcome-header i {
-    font-size: 18px;
     color: #3498db;
 }
 
 .welcome-section h2 {
-    font-size: 40px; 
+    font-size: 48px;
     font-weight: 900;
-    margin-bottom: 20px;
-    color: #000; 
+    margin: 15px 0 25px;
+    color: #000;
     line-height: 1.2;
     font-family: 'Poppins', sans-serif;
 }
 
 .welcome-section p {
-    font-size: 15px;
-    color: #000; 
-    line-height: 1.6;
-    margin-bottom: 40px;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.7;
+    margin: 0 auto 40px;
     font-family: 'Poppins', sans-serif;
+    max-width: 600px;
 }
 
 /* Image Cards Section */
@@ -351,11 +339,10 @@ header.scrolled {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    max-width: 1200px; 
+    max-width: 1200px;
     width: 100%;
 }
 
-/* ---- Rest unchanged ---- */
 .image-card {
     position: relative;
     height: 380px;
@@ -418,7 +405,7 @@ header.scrolled {
 }
 
 .card-title {
-    font-size: 28px; 
+    font-size: 28px;
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
@@ -526,7 +513,6 @@ header.scrolled {
     text-decoration: none;
 }
 
-/* Telegram button styled with text label */
 .telegram-btn {
     background: white;
     width: auto;
@@ -567,7 +553,6 @@ header.scrolled {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Back to top button */
 .back-to-top {
     background: #3498db;
     opacity: 0;
@@ -719,16 +704,12 @@ header.scrolled {
         padding: 40px 15px;
     }
 
-    .welcome-container {
-        padding: 0;
-    }
-
     .welcome-section h2 {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .welcome-section p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     /* Image cards mobile */
