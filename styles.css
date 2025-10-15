@@ -626,7 +626,7 @@ header.scrolled {
         visibility: visible !important;
         transform: none !important;
         box-shadow: none !important;
-        padding: 10px 0 10px 30px !important;
+        padding: 0 0 0 30px !important;
         max-height: 0 !important;
         overflow: hidden !important;
         transition: max-height 0.3s ease !important;
@@ -641,6 +641,7 @@ header.scrolled {
     .dropdown.active .dropdown-menu {
         max-height: 1000px !important;
         overflow: hidden !important;
+        padding: 10px 0 10px 30px !important;
     }
 
     .dropdown-menu li {
