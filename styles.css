@@ -514,13 +514,13 @@ header.scrolled {
 }
 
 .telegram-btn {
-    background: white;
-    width: auto;
-    padding: 12px 20px;
-    border-radius: 50px;
+    background: #0088cc;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     opacity: 1;
     transform: translateY(0);
@@ -528,28 +528,13 @@ header.scrolled {
 }
 
 .telegram-btn i {
-    background: #0088cc;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
+    font-size: 28px;
     color: white;
 }
 
-.telegram-btn span {
-    color: #333;
-    font-weight: 600;
-    font-size: 15px;
-    white-space: nowrap;
-    font-family: 'Poppins', sans-serif;
-}
-
 .telegram-btn:hover {
-    background: #f8f9fa;
-    transform: translateY(-2px);
+    background: #0077b3;
+    transform: translateY(-2px) scale(1.05);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
