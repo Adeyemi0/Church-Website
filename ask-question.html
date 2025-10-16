@@ -52,9 +52,19 @@
                 </p>
             </div>
 
-            <form id="prayerRequestForm" class="question-form">
+            <!-- Using FormSubmit.co - No backend required -->
+            <form id="prayerRequestForm" action="https://formsubmit.co/oluseyibanjo@christlifefortheworldministry.com" method="POST" class="question-form">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="New Prayer Request from Website">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+                
                 <div class="form-group">
-                    <label for="name">Name (Optional)</label> <input type="text" id="name" name="name" placeholder="Enter your name or submit anonymously"> </div>
+                    <label for="name">Name (Optional)</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name or submit anonymously">
+                </div>
 
                 <div class="form-group">
                     <label for="email">Email <span class="required">*</span></label>
@@ -68,25 +78,25 @@
 
                 <div class="form-group">
                     <label for="category">Prayer Category <span class="required">*</span></label>
-                    <select id="category" name="category" required>
+                    <select id="category" name="Prayer_Category" required>
                         <option value="">Select a category</option>
-                        <option value="healing">Healing & Health</option>
-                        <option value="family">Family & Relationships</option>
-                        <option value="financial">Financial Needs</option>
-                        <option value="spiritual">Spiritual Growth</option>
-                        <option value="salvation">Salvation</option>
-                        <option value="other">Other</option>
+                        <option value="Healing & Health">Healing & Health</option>
+                        <option value="Family & Relationships">Family & Relationships</option>
+                        <option value="Financial Needs">Financial Needs</option>
+                        <option value="Spiritual Growth">Spiritual Growth</option>
+                        <option value="Salvation">Salvation</option>
+                        <option value="Other">Other</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label for="prayer">Your Prayer Request <span class="required">*</span></label>
-                    <textarea id="prayer" name="prayer" rows="6" required placeholder="Type your prayer request here..."></textarea>
+                    <textarea id="prayer" name="Prayer_Request" rows="6" required placeholder="Type your prayer request here..."></textarea>
                 </div>
 
                 <div class="form-group checkbox-group">
                     <label class="checkbox-label">
-                        <input type="checkbox" id="confidential" name="confidential" checked>
+                        <input type="checkbox" id="confidential" name="Confidential" value="Yes" checked>
                         <span>Keep my request confidential</span>
                     </label>
                 </div>
@@ -106,7 +116,6 @@
             <i class="fa-solid fa-arrow-up"></i>
         </div>
         <a href="https://t.me/christ_life4" target="_blank" class="float-btn telegram-btn" title="Download Teachings on Telegram">
-           
             <i class="fa-brands fa-telegram"></i>
         </a>
     </div>
@@ -118,5 +127,3 @@
     <script src="ask-question-scripts.js"></script>
 </body>
 </html>
-
-
