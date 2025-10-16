@@ -77,83 +77,14 @@ const prayerRequestForm = document.getElementById('prayerRequestForm');
 const formMessage = document.getElementById('formMessage');
 
 prayerRequestForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        category: document.getElementById('category').value,
-        prayer: document.getElementById('prayer').value, 
-        confidential: document.getElementById('confidential').checked 
-    };
-    
     // Show loading state
     const submitBtn = prayerRequestForm.querySelector('.submit-btn');
-    const originalBtnContent = '<span>Send Prayer Request</span><i class="fa-solid fa-hand-holding-heart"></i>'; 
+    const originalBtnContent = submitBtn.innerHTML;
     submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
     submitBtn.disabled = true;
     
-    // Simulate form submission (replace with actual API call)
-    setTimeout(() => {
-        // Reset button
-        submitBtn.innerHTML = originalBtnContent;
-        submitBtn.disabled = false;
-        
-        // Show success message
-        formMessage.className = 'form-message success';
-        formMessage.textContent = 'Amen! Your prayer request has been submitted successfully. Our prayer team will lift you and your needs up to the Lord. Blessings!';
-        
-        // Reset form
-        prayerRequestForm.reset();
-        
-        // Scroll to message
-        formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        
-        // Hide message after 8 seconds
-        setTimeout(() => {
-            formMessage.style.display = 'none';
-        }, 8000);
-        
-        // Log form data to console (for testing)
-        console.log('Prayer Request submitted:', formData);
-        
-    }, 1500);
-    
-    // In production, replace the setTimeout above with actual form submission:
-    /*
-    fetch('your-api-endpoint.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        submitBtn.innerHTML = originalBtnContent;
-        submitBtn.disabled = false;
-        
-        if (data.success) {
-            formMessage.className = 'form-message success';
-            formMessage.textContent = 'Amen! Your prayer request has been submitted successfully. Our prayer team will lift you and your needs up to the Lord. Blessings!';
-            prayerRequestForm.reset();
-        } else {
-            formMessage.className = 'form-message error';
-            formMessage.textContent = 'Sorry, there was an error submitting your prayer request. Please try again.';
-        }
-        
-        formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    })
-    .catch(error => {
-        submitBtn.innerHTML = originalBtnContent;
-        submitBtn.disabled = false;
-        formMessage.className = 'form-message error';
-        formMessage.textContent = 'Sorry, there was an error submitting your prayer request. Please try again.';
-        console.error('Error:', error);
-    });
-    */
+    // The form will submit naturally via FormSubmit
+    // No need to prevent default since we're using the service
 });
 
 // Form validation enhancements
@@ -162,8 +93,6 @@ const inputs = document.querySelectorAll('.form-group input, .form-group select,
 inputs.forEach(input => {
     // Add real-time validation feedback
     input.addEventListener('blur', () => {
-        // The 'required' attribute on the input field in the HTML handles core validation.
-        // This JavaScript section applies styling only if 'required' is present and the field is empty.
         if (input.hasAttribute('required') && !input.value.trim()) {
             input.style.borderColor = '#e74c3c';
         } else {
